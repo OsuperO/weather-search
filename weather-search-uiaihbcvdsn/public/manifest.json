@@ -1,0 +1,58 @@
+{
+  "name": "补贴审核AI小助手",
+  "description": "辅助就业创业补贴审核",
+  "version": "3.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "static/js/background.js"
+  },
+  
+  "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "css": ["static/css/content.css"],
+        "js": ["static/js/content.js"],
+        "run_at": "document_end"
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidePanel.html"
+  },
+  "permissions": [
+    "storage", 
+    "webRequest",
+    "activeTab", 
+    "scripting",
+    "sidePanel",
+    "runtime",
+    "cookies",
+    "tabs"
+  ],
+  "host_permissions":[],
+  "web_accessible_resources": [
+    {
+      "resources": [ "/images/*.png" ],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": [ "insert.js" ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "/images/brain1.png",
+      "32": "/images/brain1.png",
+      "48": "/images/brain1.png",
+      "128": "/images/brain1.png"
+    }
+  },
+  "icons": {
+    "16": "/images/brain1.png",
+    "32": "/images/brain1.png",
+    "48": "/images/brain1.png",
+    "128": "/images/brain1.png"
+  },
+  "default_locale": "zh_CN"
+}

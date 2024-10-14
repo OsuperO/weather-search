@@ -1,0 +1,5 @@
+{
+    "appName": { "message": "就业创业补贴AI辅助机器人" },
+    "appDescription": { "message": "智能辅助审核" },
+    "PREFIX_URL":{"message":"http://192.168.3.38:22440/"}
+  }
